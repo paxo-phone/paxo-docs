@@ -25,4 +25,4 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Execute mkdocs utility for deployment
-      run: mkdocs gh-deploy
+      run: python -m mkdocs gh-deploy
