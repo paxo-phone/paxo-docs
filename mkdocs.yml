@@ -1,2 +1,14 @@
 site_name: Paxo Docs
+repo_url: https://github.com/paxo-phone/paxo-mkdocs
+nav:
+  - Home: 'index.md'
+  - Reference:
+    - Lua API: 'reference/lua.md'
+    - GUI library: 'reference/gui.md'
+  - Modules:
+    - Storage module: 'modules/storage.md'
+    - GSM module: 'modules/gsm.md'
+    - GUI module: 'modules/gui.md'
+      
+edit_uri_template: 'blob/main/docs/{path}'
 theme: material
