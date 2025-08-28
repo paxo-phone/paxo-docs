@@ -1,10 +1,10 @@
-# Module graphique
+# graphic module
 
-S'occupe de la gestion de l'affichage
+In charge of the display manager
 
-Le module est séparé en deux parties:
-    - une partie pour la gestion des buffers, gestion de l'écran
-    - une partie pour la gestion de la hirarchie des widgets, leur rendu, l'algorithme de rendu...
+The module is separated into two parts:
+- part for buffer management, screen management
+- part for managing the hirarchy of widgets, their rendering, the rendering algorithm...
 
 
-La classe Widget représente la base de construction d'un widget
+The Widget class represents the basis for building a widget
