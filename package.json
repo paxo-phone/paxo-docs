@@ -1,19 +1,20 @@
 {
   "name": "paxodocs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "start:en": "docusaurus start --locale en",
-    "start:fr": "docusaurus start --locale fr",
-    "build": "docusaurus build",
-    "build:en": "docusaurus build --locale en",
-    "build:fr": "docusaurus build --locale fr",
+    "start": "npm run sync-substack && docusaurus start --no-open",
+    "start:en": "npm run sync-substack && docusaurus start --locale en --no-open",
+    "start:fr": "npm run sync-substack && docusaurus start --locale fr --no-open",
+    "build": "npm run sync-substack && docusaurus build",
+    "build:en": "npm run sync-substack && docusaurus build --locale en",
+    "build:fr": "npm run sync-substack && docusaurus build --locale fr",
+    "sync-substack": "node ./src/scripts/sync-substack.js",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
+    "serve": "docusaurus serve --no-open",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc"
@@ -24,9 +25,11 @@
     "@docusaurus/preset-classic": "3.8.1",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
+    "node-fetch": "^3.3.2",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "rss-parser": "^3.13.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.8.1",
