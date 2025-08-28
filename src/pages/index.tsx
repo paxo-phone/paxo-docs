@@ -7,8 +7,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
-import styles from '../css/index.module.css';
-import { useHistory } from '@docusaurus/router';
+import styles from '../css/pages.module.css';
 
 function HeroBanner() {
   return (
@@ -16,7 +15,7 @@ function HeroBanner() {
       <div className={styles.heroInner}>
         <Heading as="h1" className={styles.heroProjectTagline}>
           <img
-            alt={translate({message: 'Docusaurus with Keytar'})}
+            alt={translate({message: 'PaxOS-9 is out'})}
             className={styles.heroLogo}
             src={useBaseUrl('/img/Paxo-PhoneMokeup.png')}
             width="500"
@@ -54,9 +53,6 @@ function HeroBanner() {
 function TopBanner() {
   // TODO We should be able to strongly type customFields
   //  Refactor to use a CustomFields interface + TS declaration merging
-  const announcedVersion = useDocusaurusContext().siteConfig.customFields
-    ?.announcedVersion as string;
-
   return (
     <div className={styles.topBanner}>
       <div className={styles.topBannerTitle}>
@@ -79,7 +75,7 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <main>
         <TopBanner />
