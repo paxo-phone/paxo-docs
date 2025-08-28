@@ -1,6 +1,10 @@
-# Documentation Paxo
+# Documentation PaxOS
 
-Vous pouvez retrouver cette doc au format web: [https://docs.paxo.fr](docs.paxo.fr)
+![PAXO Logo](https://github.com/paxo-phone/PaxOS-9/assets/45568523/ddb3b517-605c-41b4-8c1e-c8e5d156431b)
+
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![Discord](https://img.shields.io/discord/747816102250643506?label=Discord&logo=discord)](https://discord.com/invite/MpqbWr3pUG)
+[![docs.paxo.fr](https://github.com/paxo-phone/paxo-docs/static/img/logo.svg)](https://docs.paxo.fr)
 
 Pour la consulter au format Markdown, allez dans le dossier `docs` du repo.
 
@@ -11,7 +15,9 @@ Le site web se met à jour automatiquement lorsqu'un commit est publié sur la b
 ## Installation
 
 ```bash
-yarn
+npm install
+npm install rss-parser turndown axios
+
 ```
 
 ## Local Development
@@ -45,3 +51,4 @@ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
