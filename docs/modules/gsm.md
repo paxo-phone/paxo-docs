@@ -29,7 +29,7 @@ This module handles conversation data, including loading and saving messages for
 ### Data Structures
 
 * **`Conversations::Message`:** Represents a single message with `message` (std::string), `who` (bool indicating sender - false for self, true for other), and `date` (std::string) fields.
-* **`Conversations::Conversation`:** Represents a conversation with a specific `number` (std::string) and a vector of `messages` (std::vector<Message>).
+* **`Conversations::Conversation`:** Represents a conversation with a specific `number` (std::string) and a vector of `messages` (`std::vector<Message>`).
 
 ### Functions
 
@@ -51,8 +51,8 @@ This module provides the core GSM functionality, interacting directly with the G
 
 ### Data Structures
 
-* **`GSM::Request`:** Represents a request to be executed by the GSM module, with a `function` (std::function<void(void)>) and a `priority` (enum).
-* **`GSM::Key`:** Represents a key string to watch for in the GSM modem's responses, with a `key` (std::string) and a `function` (std::function<void()>) to execute when the key is found.
+* **`GSM::Request`:** Represents a request to be executed by the GSM module, with a `function` (`std::function<void(void)>`) and a `priority` (enum).
+* **`GSM::Key`:** Represents a key string to watch for in the GSM modem's responses, with a `key` (std::string) and a `function` (`std::function<void()>`) to execute when the key is found.
 * **`GSM::State`:** Represents the current state of the GSM module (call state, call failure, calling number).
 * **`GSM::Message`:** Represents an SMS message, with `number`, `message`, and `date`.
 * **`GSM::ExternalEvents`:** Namespace containing callback functions for incoming calls, new messages, and message errors.
