@@ -1,51 +1,64 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Build and deploy
+# Nom du workflow qui apparaîtra dans l'onglet "Actions" de GitHub
+name: Build and Deploy Docusaurus to GitHub Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # Se déclenche à chaque push sur la branche "main"
   push:
     branches: ["main"]
 
-  # Allows you to run this workflow manually from the Actions tab
+  # Permet de lancer ce workflow manuellement depuis l'onglet "Actions"
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Définit les permissions nécessaires pour que le workflow puisse déployer sur GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# Empêche les déploiements concurrents pour éviter les conflits
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
+  # Le seul job de ce workflow : construire et déployer
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      # 1. Récupère le code de votre dépôt
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Python
-        uses: actions/setup-python@v5.2.0
+
+      # 2. Met en place Node.js (l'environnement de Docusaurus)
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # Utilise une version stable de Node.js
+          cache: 'npm'       # Met en cache les dépendances pour accélérer les builds futurs
+
+      # 3. Installe les dépendances du projet
       - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
+        run: npm ci # 'ci' est plus rapide et plus sûr pour l'intégration continue que 'install'
+
+      # 4. Construit le site Docusaurus
       - name: Build site
-        run: mkdocs build
+        run: npm run build # C'est la commande standard de Docusaurus
+
+      # 5. Configure GitHub Pages pour recevoir le site
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      # 6. Prépare le dossier du site construit pour le déploiement
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: './site'
+          # Le résultat de `npm run build` est dans le dossier 'build'
+          path: './build'
+
+      # 7. Déploie le site sur GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
