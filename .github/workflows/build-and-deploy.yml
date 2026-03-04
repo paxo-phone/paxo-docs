@@ -36,7 +36,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18' # Utilise une version stable de Node.js
+          node-version: '20' # Utilise une version stable de Node.js
           cache: 'npm'       # Met en cache les dépendances pour accélérer les builds futurs
 
       # 3. Installe les dépendances du projet
