@@ -19,9 +19,9 @@
   "theme.NotFound.goToDocs": {
     "message": "📖 Voir la documentation"
   },
-
-
-
+  "theme.NotFound.searchSuggestion": {
+    "message": "Vous pouvez également chercher ce que vous souhaitez:"
+  },
   "Docusaurus with Keytar": {
     "message": "Docusaurus with Keytar"
   },
@@ -31,14 +31,7 @@
   },
   "homepage.banner.launch.newVersion": {
     "message": "PaxOS 9 est sorti!"
-  },
-
-
-
-
-
-
-  
+  },  
   "theme.BackToTopButton.buttonAriaLabel": {
     "message": "Retour au début de la page",
     "description": "The ARIA label for the back to top button"

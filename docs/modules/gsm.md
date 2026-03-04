@@ -21,7 +21,6 @@ This module manages contact information. Contacts are stored in a JSON file (`/a
 * **`Contacts::getContact(std::string name)`:** Returns the `contact` object associated with the given name. Returns an empty contact if not found.
 * **`Contacts::getByNumber(std::string number)`:** Returns the `contact` object associated with the given phone number. Returns an empty contact if not found.
 
-
 ## 2. `conversation.cpp` / `conversation.hpp`
 
 This module handles conversation data, including loading and saving messages for each conversation.
@@ -35,7 +34,6 @@ This module handles conversation data, including loading and saving messages for
 
 * **`Conversations::loadConversation(const storage::Path &filePath, Conversation &conv)`:** Loads a conversation from the specified JSON file.  Handles file errors and JSON parsing exceptions.
 * **`Conversations::saveConversation(const storage::Path &filePath, const Conversation &conv)`:** Saves a conversation to the specified JSON file. Limits the number of saved messages to `MAX_MESSAGES` (40), keeping the most recent ones. Creates the necessary directories if they don't exist.
-
 
 ## 3. `gsm.cpp` / `gsm.hpp`
 
@@ -89,7 +87,6 @@ This module provides the core GSM functionality, interacting directly with the G
 * **`GSM::run()`:** Main loop of the GSM module. Handles initialization, request processing, and event handling.
 * **`GSM::getHttpMMS(std::string number, std::string url)`:** Downloads and processes MMS messages (ESP_PLATFORM only).
 
-
 ## 4. `message.cpp` / `message.hpp`
 
 Provides functions for loading and saving messages from/to JSON files. This module seems redundant given the similar functionality in `conversation.cpp/hpp`, and its usage isn't clear within the provided code.
@@ -102,7 +99,6 @@ Provides functions for loading and saving messages from/to JSON files. This modu
 
 * **`Message::loadMessages(const std::string& filePath, std::vector<Message>& messages)`:** Loads messages from a JSON file.
 * **`Message::saveMessages(const std::string& filePath, const std::vector<Message>& messages)`:** Saves messages to a JSON file.
-
 
 ## 5. `pdu.cpp` / `pdu.hpp`
 

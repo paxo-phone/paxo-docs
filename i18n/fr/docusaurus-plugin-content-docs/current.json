@@ -3,12 +3,20 @@
     "message": "Next",
     "description": "The label for version current"
   },
+  "sidebar.tutorialSidebar.category.Installation": {
+    "message": "Installation",
+    "description": "The label for category Installation in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Installation.link.generated-index.description": {
+    "message": "Ce chapitre détaille les étapes à suivre pour monter et préparer le Paxophone, dans le but de le rendre fonctionnel.",
+    "description": "The generated-index page description for category Installation in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.Modules": {
     "message": "Modules",
     "description": "The label for category Modules in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Modules.link.generated-index.description": {
-    "message": "lorem impsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "message": "Ce chapitre contient toutes les informations concernant PaxOS, le système d'exploitation du Paxophone.",
     "description": "The generated-index page description for category Modules in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.References": {
@@ -16,7 +24,7 @@
     "description": "The label for category References in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.References.link.generated-index.description": {
-    "message": "lorem impsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "message": "Ce chapitre fournit les éléments à connaître pour développer des applications pour le Paxophone.",
     "description": "The generated-index page description for category References in sidebar tutorialSidebar"
   }
 }

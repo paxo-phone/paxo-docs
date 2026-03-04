@@ -84,7 +84,6 @@ Fournit des opérations de fichiers de plus haut niveau, y compris l’analyse e
 * `parse(std::string str)` : Analyse une chaîne JSON dans un objet `nlohmann::json`. Retourne `NULL` en cas d’échec.
 * `save(std::string filename, json jsonObj)` : Sauvegarde un objet `nlohmann::json` dans un fichier.
 
-
 ## 3. Notes
 
 * La base de code est conçue pour être indépendante de la plateforme, supportant à la fois les systèmes de bureau (Linux, Windows, macOS) et embarqués (ESP32).

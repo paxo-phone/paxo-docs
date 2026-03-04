@@ -65,52 +65,50 @@ gui.setWindow(win) -- Définit la fenêtre active
 
 * **LuaBox:**  `setRadius(radius)`: Sets the corner radius.
 * **LuaCanvas:**
-    * `setPixel(x, y, color)`: Sets a pixel's color.
-    * `drawRect(x, y, w, h, color)`, `fillRect(...)`: Draws or fills a rectangle.
-    * `drawCircle(x, y, radius, color)`, `fillCircle(...)`: Draws or fills a circle.
-    * `drawRoundRect(x, y, w, h, radius, color)`, `fillRoundRect(...)`: Draws or fills a rounded rectangle.
-    * `drawPolygon(vertices, color)`, `fillPolygon(...)`: Draws or fills a polygon. `vertices` is a Lua table of `{x, y}` coordinate pairs.
-    * `drawLine(x1, y1, x2, y2, color)`: Draws a line.
-    * `drawText(x, y, text, color)`: Draws text.
-    * `drawTextCentered(x, y, text, color, horizontallyCentered, verticallyCentered)`: Draws centered text.
-    * `drawTextCenteredInRect(x, y, w, h, text, color, horizontallyCentered, verticallyCentered)`: Draws text centered within a rectangle.
-    * `getTouch()`: Returns a table containing the touch coordinates relative to the canvas. `{x, y}`
-    * `onTouch(function)`: Sets a callback function executed when the canvas is touched, passing the touch coordinates as a table argument.
+  * `setPixel(x, y, color)`: Sets a pixel's color.
+  * `drawRect(x, y, w, h, color)`, `fillRect(...)`: Draws or fills a rectangle.
+  * `drawCircle(x, y, radius, color)`, `fillCircle(...)`: Draws or fills a circle.
+  * `drawRoundRect(x, y, w, h, radius, color)`, `fillRoundRect(...)`: Draws or fills a rounded rectangle.
+  * `drawPolygon(vertices, color)`, `fillPolygon(...)`: Draws or fills a polygon. `vertices` is a Lua table of `{x, y}` coordinate pairs.
+  * `drawLine(x1, y1, x2, y2, color)`: Draws a line.
+  * `drawText(x, y, text, color)`: Draws text.
+  * `drawTextCentered(x, y, text, color, horizontallyCentered, verticallyCentered)`: Draws centered text.
+  * `drawTextCenteredInRect(x, y, w, h, text, color, horizontallyCentered, verticallyCentered)`: Draws text centered within a rectangle.
+  * `getTouch()`: Returns a table containing the touch coordinates relative to the canvas. `{x, y}`
+  * `onTouch(function)`: Sets a callback function executed when the canvas is touched, passing the touch coordinates as a table argument.
 * **LuaImage:** `setTransparentColor(color)`: Sets the transparent color for the image.
 * **LuaLabel:**
-    * `setText(text)`, `getText()`: Sets or gets the label's text.
-    * `setFontSize(size)`: Sets the font size.
-    * `getTextWidth()`, `getTextHeight()`: Gets the dimensions of the text.
-    * `setVerticalAlignment(alignment)`, `setHorizontalAlignment(alignment)`: Sets the text alignment.
-    * `setTextColor(color)`: Sets the text color.  Alignment constants are defined below.
+  * `setText(text)`, `getText()`: Sets or gets the label's text.
+  * `setFontSize(size)`: Sets the font size.
+  * `getTextWidth()`, `getTextHeight()`: Gets the dimensions of the text.
+  * `setVerticalAlignment(alignment)`, `setHorizontalAlignment(alignment)`: Sets the text alignment.
+  * `setTextColor(color)`: Sets the text color.  Alignment constants are defined below.
 * **LuaInput:**
-    * `setText(text)`, `getText()`:  Sets or gets the input text.
-    * `setPlaceholder(text)`: Sets placeholder text.
-    * `setTitle(text)`: Sets the title for the input.
-    * `onChange(function)`: sets a callback to be called when the text changes.
+  * `setText(text)`, `getText()`:  Sets or gets the input text.
+  * `setPlaceholder(text)`: Sets placeholder text.
+  * `setTitle(text)`: Sets the title for the input.
+  * `onChange(function)`: sets a callback to be called when the text changes.
 * **LuaButton:**
-    * `setText(text)`, `getText()`: Sets or gets the button text.
-    * `setIcon(path)`: Sets an icon for the button.  Path can be relative or absolute.
-    * `setTheme(theme)`:  Sets the button theme (true for dark, false for light).
-    * `format()`: Refreshes the button's layout.
+  * `setText(text)`, `getText()`: Sets or gets the button text.
+  * `setIcon(path)`: Sets an icon for the button.  Path can be relative or absolute.
+  * `setTheme(theme)`:  Sets the button theme (true for dark, false for light).
+  * `format()`: Refreshes the button's layout.
 * **LuaSwitch:**
-    * `setState(state)`, `getState()`: Sets or gets the switch state (true/false).
-    * `onChange(function)`: callback called when the switch state changes.
+  * `setState(state)`, `getState()`: Sets or gets the switch state (true/false).
+  * `onChange(function)`: callback called when the switch state changes.
 * **LuaRadio:** `setState(state)`, `getState()`: Sets or gets the radio button state (true/false).
 * **LuaCheckbox:** `setState(state)`, `getState()`: Sets or gets the checkbox state (true/false).
 * **LuaVerticalList:**
-    * `setIndex(index)`: Sets the currently selected index.
-    * `setSpaceLine(line)`: Sets the spacing between list items.
-    * `setSelectionFocus(focus)`: Sets the selection focus (UP/CENTER). Selection constants are defined below.
-    * `getSelected()`: Returns the index of the selected item.
-    * `select(index)`: Selects an item at the given index and triggers the `onSelect` callback.
-    * `setSelectionColor(color)`: Sets the selection highlight color.
-    * `setAutoSelect(autoSelect)`: Enables/disables automatic selection on touch.
-    * `onSelect(function)`: Sets a callback function to be executed when an item is selected.
+  * `setIndex(index)`: Sets the currently selected index.
+  * `setSpaceLine(line)`: Sets the spacing between list items.
+  * `setSelectionFocus(focus)`: Sets the selection focus (UP/CENTER). Selection constants are defined below.
+  * `getSelected()`: Returns the index of the selected item.
+  * `select(index)`: Selects an item at the given index and triggers the `onSelect` callback.
+  * `setSelectionColor(color)`: Sets the selection highlight color.
+  * `setAutoSelect(autoSelect)`: Enables/disables automatic selection on touch.
+  * `onSelect(function)`: Sets a callback function to be executed when an item is selected.
 * **LuaHorizontalList:**
-    * `setSpaceLine(line)`: Sets the spacing between list items.
-
-
+  * `setSpaceLine(line)`: Sets the spacing between list items.
 
 #### GUI Constants
 
@@ -145,7 +143,6 @@ for i, item in ipairs(list) do
 end
 ```
 
-
 **Fonctions principales :**
 
 * `file(filename, mode)` : crée un objet `LuaStorageFile`.
@@ -163,7 +160,6 @@ end
 * `readChar()`: Reads a single character.
 * `readLine()`: Reads a line.
 * `readAll()`: Reads the entire file content.
-
 
 ### 3. Module `hardware`
 
@@ -288,7 +284,6 @@ gsm.saveContacts()
 * `editContact(contact)`: Edits an existing contact. The `contact` table should contain the phone number to identify the contact to edit.
 * `getContactByNumber(phone)`: Retrieves a contact by phone number.
 
-
 ### 7. Module `json`
 
 Parsing et manipulation JSON.
@@ -345,7 +340,6 @@ print(array[2].a) -- 2
 * `remove(key)`: Removes a key-value pair.
 * `get_int(key)`, `get_double(key)`, `get_bool(key)`, `get_string(key)`: Get values with type checking.
 * `set_int(key, value)`, `set_double(key, value)`, `set_bool(key, value)`: Set values with type checking.
-
 
 ## Fonctions spécifiques Lua
 

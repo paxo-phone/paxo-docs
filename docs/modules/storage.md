@@ -82,7 +82,6 @@ Provides higher-level file operations, including JSON parsing and saving.
 * `parse(std::string str)`: Parses a JSON string into a `nlohmann::json` object. Returns `NULL` on failure.
 * `save(std::string filename, json jsonObj)`: Saves a `nlohmann::json` object to a file.
 
-
 ## 3. Notes
 
 * The codebase is designed to be platform-agnostic, supporting both desktop (Linux, Windows, macOS) and embedded (ESP32) systems.
@@ -90,6 +89,5 @@ Provides higher-level file operations, including JSON parsing and saving.
 * The `storage::init()` function should be called before any other `storage` functions on ESP32.
 * Error handling is implemented for JSON parsing and SD card initialization.  File operations generally rely on the underlying system's error handling.
 * The `appFile` module provides a convenient way to work with JSON files, built upon the `storage` module's functionalities.
-
 
 This documentation provides a comprehensive overview of the `storage` and `appFile` modules, enabling developers to understand and utilize their functionalities effectively within the Paxos project.

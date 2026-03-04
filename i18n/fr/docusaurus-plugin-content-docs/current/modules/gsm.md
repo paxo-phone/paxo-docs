@@ -23,7 +23,6 @@ Les contacts sont stockés dans un fichier JSON (`/apps/contacts/list.json`) et 
 * **`Contacts::getContact(std::string name)` :** Retourne l’objet `contact` associé au nom donné. Retourne un contact vide s’il n’est pas trouvé.
 * **`Contacts::getByNumber(std::string number)` :** Retourne l’objet `contact` associé au numéro donné. Retourne un contact vide s’il n’est pas trouvé.
 
-
 ## 2. `conversation.cpp` / `conversation.hpp`
 
 Ce module gère les données de conversation, y compris le chargement et la sauvegarde des messages pour chaque conversation.
@@ -37,7 +36,6 @@ Ce module gère les données de conversation, y compris le chargement et la sauv
 
 * **`Conversations::loadConversation(const storage::Path &filePath, Conversation &conv)` :** Charge une conversation depuis le fichier JSON spécifié. Gère les erreurs de fichier et d’analyse JSON.
 * **`Conversations::saveConversation(const storage::Path &filePath, const Conversation &conv)` :** Sauvegarde une conversation dans le fichier JSON spécifié. Limite le nombre de messages sauvegardés à `MAX_MESSAGES` (40), en gardant les plus récents. Crée les répertoires nécessaires s’ils n’existent pas.
-
 
 ## 3. `gsm.cpp` / `gsm.hpp`
 

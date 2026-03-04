@@ -9,8 +9,8 @@
 Pour la consulter au format Markdown, allez dans le dossier `docs` du repo.
 
 ## A l'attention des contributeurs
-Le site web se met à jour automatiquement lorsqu'un commit est publié sur la branche `main`. Merci de faire des PR pour faire des modifications.
 
+Le site web se met à jour automatiquement lorsqu'un commit est publié sur la branche `main`. Merci de faire des PR pour faire des modifications.
 
 ## Installation
 
@@ -52,4 +52,3 @@ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
-

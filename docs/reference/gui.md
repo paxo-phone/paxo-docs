@@ -6,7 +6,7 @@ This document provides comprehensive documentation for the Paxos GUI library, de
 
 The `ElementBase` class serves as the foundation for all GUI elements within the Paxos library. It defines common properties and methods inherited by all other element types.
 
-### Members:
+### Members
 
 - `m_x`: X-coordinate of the element's top-left corner.
 - `m_y`: Y-coordinate of the element's top-left corner.
@@ -21,7 +21,7 @@ The `ElementBase` class serves as the foundation for all GUI elements within the
 - `m_isEnabled`: Boolean indicating whether the element is enabled.
 - `m_surface`: Pointer to the underlying graphics surface.
 
-### Methods:
+### Methods
 
 - `render()`: Virtual function responsible for rendering the element's visual representation. **Must be overridden by derived classes.**
 - `update()`: Updates the element's state and handles user interaction.
@@ -51,8 +51,7 @@ The `ElementBase` class serves as the foundation for all GUI elements within the
 - `getSurface()`: Returns a pointer to the surface.
 - `forceUpdate()`: Forces a graphical update.
 
-
-### Example:
+### Example
 
 ```cpp
 #include "ElementBase.hpp"
@@ -93,24 +92,22 @@ int main() {
 }
 ```
 
-
 ## GUI Elements
 
 ### 1. Box
 
 A simple rectangular box element.
 
-#### Members:
+#### Members
 
 Inherits all members from `ElementBase`.
 
-#### Methods:
+#### Methods
 
 - `Box(uint16_t x, uint16_t y, uint16_t width, uint16_t height)`: Constructor.
 - `render() override`: Renders the box.
 
-
-#### Example:
+#### Example
 
 ```cpp
 #include "Box.hpp"
@@ -126,14 +123,13 @@ myBox.setRadius(5);
 
 A clickable button element.
 
-#### Members:
+#### Members
 
 - `m_label`:  Pointer to the button's label.
 - `m_image`: Pointer to the button's image.
 - `m_theme`: Boolean representing the button theme (e.g., light or dark).
 
-
-#### Methods:
+#### Methods
 
 - `Button(uint16_t x, uint16_t y, uint16_t width, uint16_t height)`: Constructor.
 - `render() override`: Renders the button.
@@ -144,8 +140,7 @@ A clickable button element.
 - `onClick() override`: Called when the button is clicked.
 - `onReleased() override`: Called when the button is released
 
-
-#### Example:
+#### Example
 
 ```cpp
 #include "Button.hpp"
@@ -163,11 +158,11 @@ if (myButton.isTouched()) {
 
 A drawable surface for custom graphics.
 
-#### Members:
+#### Members
 
 Inherits members from `ElementBase`.
 
-#### Methods:
+#### Methods
 
 - `Canvas(uint16_t x, uint16_t y, uint16_t width, uint16_t height)`: Constructor.
 - `render() override`: Dummy render function (drawing is done directly on the surface).
@@ -176,7 +171,7 @@ Inherits members from `ElementBase`.
 - `drawText(...)`: Draw text with optional font size.
 - `drawTextCentered(...)`: Draw centered text with optional alignment parameters.
 
-#### Example:
+#### Example
 
 ```cpp
 #include "Canvas.hpp"
@@ -192,18 +187,18 @@ myCanvas.drawText(0,0, text, COLOR_BLACK);
 
 A checkbox element.
 
-#### Members:
+#### Members
 
 - `m_state`: Boolean indicating whether the checkbox is checked.
 
-#### Methods:
+#### Methods
 
 - `Checkbox(uint16_t x, uint16_t y)`: Constructor.
 - `render() override`: Renders the checkbox.
 - `setState(bool state)`: Sets the checked state.
 - `getState()`: Returns the checked state.
 
-#### Example:
+#### Example
 
 ```cpp
 #include "Checkbox.hpp"
@@ -225,17 +220,17 @@ Marked as deprecated; avoid using.
 
 Displays an image from storage.
 
-#### Members:
+#### Members
 
 - `m_path`: Path to the image file.
 
-#### Methods:
+#### Methods
 
 - `Image(storage::Path path, uint16_t x, uint16_t y, uint16_t width, uint16_t height)`: Constructor.
 - `render() override`: Renders the image.
 - `load()`: Loads the image from the specified path.
 
-#### Example:
+#### Example
 
 ```cpp
 #include "Image.hpp"
@@ -248,12 +243,12 @@ myImage.load();
 
 A text input field.
 
-#### Members:
+#### Members
 
 - `m_text`: The inputted text.
 - `m_placeHolder`: Placeholder text displayed when the input is empty.
 
-#### Methods:
+#### Methods
 
 - `Input(uint16_t x, uint16_t y)`: Constructor.
 - `render() override`: Renders the input field.
@@ -262,8 +257,7 @@ A text input field.
 - `getText()`: Returns the input text.
 - `getPlaceHolder()`: Returns the placeholder text.
 
-
-#### Example:
+#### Example
 
 ```c++
 #include "Input.hpp"
@@ -278,15 +272,15 @@ if (myInput.isTouched()) {
 }
 ```
 
-
 ### 8. Keyboard
 
 An on-screen keyboard for text input.
 
-#### Members:
+#### Members
+
 (Numerous members related to keyboard layout and state - see Keyboard.hpp for full list)
 
-#### Methods:
+#### Methods
 
 - `Keyboard(const std::string &defaultText = "")`: Constructor.
 - `render() override`: Renders the keyboard.
@@ -295,8 +289,7 @@ An on-screen keyboard for text input.
 - `hasExitKeyBeenPressed()`: Checks if the exit key has been pressed.
 - `setPlaceholder(const std::string &placeholder)`: Sets placeholder text for the input field.
 
-
-#### Example:
+#### Example
 
 ```cpp
 #include "Keyboard.hpp"
@@ -312,18 +305,17 @@ if (keyboard.hasExitKeyBeenPressed()) {
 }
 ```
 
-
 ### 9. Label
 
 Displays static text.
 
-#### Members:
+#### Members
 
 - `m_text`: The text to display.
 - `m_textColor`: Color of the text.
 - `m_fontSize`: Size of the font.
 
-#### Methods:
+#### Methods
 
 - `Label(uint16_t x, uint16_t y, uint16_t width, uint16_t height)`: Constructor.
 - `render() override`: Renders the label.
@@ -334,9 +326,7 @@ Displays static text.
 - `setHorizontalAlignment(Alignement alignment)`: Sets horizontal alignment.
 - `setVerticalAlignment(Alignement alignment)`: Sets vertical alignment.
 
-
-
-#### Example:
+#### Example
 
 ```cpp
 #include "Label.hpp"
@@ -347,17 +337,14 @@ myLabel.setTextColor(COLOR_GREEN);
 myLabel.setHorizontalAlignment(gui::elements::Label::CENTER);
 ```
 
-
 ### 10. List (VerticalList & HorizontalList)
-
 
 Creates scrollable lists of elements.
 
-
 #### Members: (VerticalList)
+
 - `m_lineSpace`: Spacing between list items.
 - `m_focusedIndex`: Index of the currently focused item.
-
 
 #### Methods: (VerticalList)
 
@@ -375,8 +362,7 @@ Creates scrollable lists of elements.
 - `add(ElementBase* widget)`: Adds an element to the list.
 - `setSpaceLine(uint16_t y)`: Sets spacing between lines.
 
-
-#### Example (VerticalList):
+#### Example (VerticalList)
 
 ```cpp
 #include "List.hpp"
@@ -396,25 +382,22 @@ for (int i = 0; i < 20; ++i) {
 myList.updateAll();
 ```
 
-
 ### 11. Radio
 
 A radio button element.
 
-
-#### Members:
+#### Members
 
 - `m_state`: Boolean indicating whether the radio button is selected.
 
-#### Methods:
+#### Methods
 
 - `Radio(uint16_t x, uint16_t y)`: Constructor.
 - `render() override`: Renders the radio button.
 - `setState(bool state)`: Sets the selected state.
 - `getState()`:  Returns the selected state.
 
-#### Example:
-
+#### Example
 
 ```cpp
 #include "Radio.hpp"
@@ -428,25 +411,22 @@ if (myRadio.isTouched()) {
 }
 ```
 
-
-
-
 ### 12. Switch
 
 A toggle switch element.
 
-#### Members:
+#### Members
 
 - `m_state`: Boolean indicating the switch state (on/off).
 
-#### Methods:
+#### Methods
 
 - `Switch(uint16_t x, uint16_t y)`: Constructor.
 - `render() override`: Renders the switch.
 - `setState(bool state)`: Sets the switch state.
 - `getState()`: Returns the switch state.
 
-#### Example:
+#### Example
 
 ```c++
 #include "Switch.hpp"
@@ -464,16 +444,16 @@ if (mySwitch.isTouched()) {
 
 A top-level window element.
 
-#### Members:
+#### Members
+
 - `windows`: A static vector containing all created windows.
 
-
-#### Methods:
+#### Methods
 
 - `Window()`: Constructor.
 - `render() override`: Renders the window.
 
-#### Example:
+#### Example
 
 ```c++
 #include "Window.hpp"
@@ -489,13 +469,11 @@ while(true) {
 
 ```
 
-
 ## GuiManager
 
 A singleton class providing utility functions for the GUI.
 
-
-#### Methods:
+#### Methods
 
 - `getInstance()`: Returns the singleton instance.
 - `getWindow()`: Returns the main window.
@@ -503,9 +481,7 @@ A singleton class providing utility functions for the GUI.
 - `showWarningMessage(const std::string& msg )`: Shows a warning message popup.
 - `showErrorMessage(const std::string& msg )`: Shows an error message popup.
 
-
-
-#### Example:
+#### Example
 
 ```c++
 #include "GuiManager.hpp"
@@ -522,6 +498,5 @@ while(true) {
     mainWindow.updateAll();
 }
 ```
-
 
 This documentation provides a basic overview of the Paxos GUI library.  Refer to the individual header files (`.hpp`) for more detailed information about each class and its members. Remember to consult the graphics library documentation for specifics on color definitions and other graphics-related functions.

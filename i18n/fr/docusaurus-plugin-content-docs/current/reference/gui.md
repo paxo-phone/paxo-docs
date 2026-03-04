@@ -90,7 +90,7 @@ Fournit des opérations de fichiers de plus haut niveau, incluant l’analyse et
 - La gestion des erreurs est implémentée pour l’analyse JSON et l’initialisation de la carte SD. Les opérations sur fichiers s’appuient généralement sur la gestion des erreurs du système sous-jacent.
 - Le module `appFile` fournit un moyen pratique de travailler avec des fichiers JSON, en s’appuyant sur les fonctionnalités du module `storage`.
 
-#### Exemple:
+### Exemple
 
 ```c++
 #include "GuiManager.hpp"
@@ -108,5 +108,4 @@ while(true) {
 }
 ```
 
-
-Cette documentation fournit un aperçu de base de la bibliothèque GUI Paxos. Voir les fichiers d'en-tête individuels (`.hpp`) pour des informations plus détaillées sur chaque classe et ses membres. N'oubliez pas de consulter la documentation de la bibliothèque graphique pour des détails sur les définitions de couleur et d'autres fonctions liées aux graphiques.
+Cette documentation fournit un aperçu de base de la bibliothèque GUI Paxos. Voir les fichiers d'en-tête individuels (`.hpp`) pour des informations plus détaillées sur chaque classe et ses membres. N'oubliez pas de consulter la documentation de la bibliothèque graphique pour des détails sur les définitions de couleur et d'autres fonctions liées aux graphiques

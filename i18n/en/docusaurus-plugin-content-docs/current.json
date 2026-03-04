@@ -1,22 +1,31 @@
 {
   "version.label": {
     "message": "Next",
-    "description": "The label for version current"
+    "description": "The label for the current version"
+  },
+  "sidebar.tutorialSidebar.category.Installation": {
+    "message": "Installation",
+    "description": "The label for the Installation category in the tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Installation.link.generated-index.description": {
+    "message": "This chapter details the steps to follow to set up and prepare the Paxophone, in order to make it functional.",
+    "description": "The generated-index page description for the Installation category in the tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Modules": {
     "message": "Modules",
-    "description": "The label for category Modules in sidebar tutorialSidebar"
+    "description": "The label for the Modules category in the tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Modules.link.generated-index.description": {
-    "message": "lorem impsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "description": "The generated-index page description for category Modules in sidebar tutorialSidebar"
+    "message": "This chapter contains all the information regarding PaxOS, the operating system of the Paxophone.",
+    "description": "The generated-index page description for the Modules category in the tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.References": {
     "message": "References",
-    "description": "The label for category References in sidebar tutorialSidebar"
+    "description": "The label for the References category in the tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.References.link.generated-index.description": {
-    "message": "lorem impsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "description": "The generated-index page description for category References in sidebar tutorialSidebar"
+    "message": "This chapter provides the information needed to develop applications for the Paxophone.",
+    "description": "The generated-index page description for the References category in the tutorialSidebar"
   }
 }
+

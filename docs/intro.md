@@ -4,11 +4,13 @@ sidebar_position: 1
 
 # Welcome to Paxo Docs
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Here you will find all the resources you need to get the most out of your Paxophone.
 
-## Project layout
-```
-    ├── docs 
-       ├── modules      # The documentation homepage.
-       └── references   # Other markdown pages, images and other files. 
+## Documentation Structure
+
+```text
+    ├── Docs 
+       ├── Installation   # How to assemble, flash, and prepare your Paxophone.
+       ├── Modules        # Details the modules embedded in the PaxOS system.
+       └── References     # Documentation for application development.
 ```
